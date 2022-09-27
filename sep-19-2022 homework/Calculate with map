@@ -1,0 +1,32 @@
+#include <iostream>
+#include <map>
+
+double add(double n1, double n2)
+{return n1 + n2;}
+double sub(double n1, double n2)
+{return n1 - n2;}
+double mul(double n1, double n2)
+{return n1 * n2;}
+double div(double n1, double n2)
+{return n1 / n2;}
+
+int main() {
+  std::map<char, double (*)(double, double)> calculator;
+  double n1 = 0;
+  double n2 = 0;
+  char sym = 0;
+  std::cout << "Enter the first number please: ";
+  std::cin >> n1;
+  std::cout << "Enter the second number please: ";
+  std::cin >> n2;
+  do {
+  std::cout << "Enter the math operation [*]\b\b";
+  std::cin >> sym;
+  } while (sym != '+' && sym != '-' && sym != '/' && sym != '*');
+  calculator['+'] = add;
+  calculator['-'] = sub;
+  calculator['*'] = mul;
+  calculator['/'] = div;
+  std::cout << n1 << sym << n2 << "=" << calculator[sym](n1, n2) << std::endl;
+  return 0;
+}
