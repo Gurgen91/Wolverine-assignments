@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+  double n1 = 0;
+  double n2 = 0;
+  double n3 = 0;
+  
+  std::cout << "Enter the first number please: ";
+  std::cin >> n1;
+  std::cout << "Enter the second number please: ";
+  std::cin >> n2;
+  std::cout << "Enter the third number please: ";
+  std::cin >> n3;
+  std::cout << "The average of this numbers is : " << (n1 + n2 + n3) / 3 << std::endl;
+  return 0;  
+}
