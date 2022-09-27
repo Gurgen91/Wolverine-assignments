@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main() {
+    int n = 0;
+    std::cout << "Enter a intejer please: ";
+    std::cin >> n;
+    int temp = 0;
+    loop:
+    if (temp <= n) {
+    std::cout << temp++ << std::endl;
+    goto loop;}
+    return 0;
+}
