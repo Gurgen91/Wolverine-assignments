@@ -18,4 +18,4 @@ int main() {
     std::cout << std::endl;
     std::cout << "Sum of the array : " << sum << std::endl;
     return 0;
-}
+} 
